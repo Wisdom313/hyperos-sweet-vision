@@ -36,14 +36,26 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           <span className="badge badge-primary">Redmi Note 10 Pro - Sweet</span>
         </motion.div>
         
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold text-center mb-4 tracking-tight text-sweet"
+          className="relative mb-4"
         >
-          HyperOS for <span className="text-gradient">Sweet</span>
-        </motion.h1>
+          {/* Fancy Title with Background Glow */}
+          <div className="relative">
+            <h1 className="text-4xl md:text-7xl font-bold text-center tracking-tight">
+              <span className="relative z-10 inline-block">
+                <span className="text-sweet">Hyper</span>
+                <span className="text-gradient">OS</span>
+                <span className="text-sweet"> Ports</span>
+                <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-hyper/0 via-hyper to-hyper/0"></div>
+              </span>
+            </h1>
+            {/* Decorative Glow */}
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-32 h-32 bg-hyper/30 rounded-full filter blur-[60px] opacity-70"></div>
+          </div>
+        </motion.div>
         
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -64,6 +76,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           <Button 
             size="lg" 
             className="bg-hyper hover:bg-hyper-dark text-white shadow-lg shadow-hyper/25 px-8"
+            onClick={() => window.open("https://devuploads.com/sn5n70ibfg1j", "_blank")}
           >
             <DownloadIcon className="h-4 w-4 mr-2" />
             Download ROM
@@ -72,9 +85,10 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             size="lg" 
             variant="outline" 
             className="border-hyper text-hyper hover:bg-hyper/5"
+            onClick={() => document.getElementById('models')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <ArrowDownIcon className="h-4 w-4 mr-2" />
-            Learn More
+            Explore Models
           </Button>
         </motion.div>
 

@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Changelog from "@/components/Changelog";
 import Footer from "@/components/Footer";
+import ModelSelector from "@/components/ModelSelector";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
     >
       <Header />
       <Hero />
+      <ModelSelector />
       <Features />
       <Changelog />
       <Footer />
