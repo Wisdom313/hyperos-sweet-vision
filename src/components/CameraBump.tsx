@@ -46,33 +46,53 @@ const CameraBump: React.FC<CameraBumpProps> = ({
           strokeWidth="2"
         />
         
-        {/* Camera Module */}
+        {/* Camera Module - Rectangular bump with rounded corners */}
         <rect
-          x="160"
-          y="35"
-          width="50"
-          height="70"
-          rx="10"
+          x="150"
+          y="30"
+          width="65"
+          height="90"
+          rx="14"
           className={variant === "filled" ? "fill-sweet/20" : "fill-none"}
           stroke="currentColor"
           strokeWidth="2"
         />
         
-        {/* Main Camera */}
+        {/* Main Camera - Large primary camera */}
         <circle
-          cx="185"
+          cx="182.5"
           cy="55"
+          r="16"
+          className={variant === "filled" ? "fill-hyper/20" : "fill-none"}
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        
+        {/* Ultra-Wide Camera */}
+        <circle
+          cx="182.5"
+          cy="95"
           r="12"
           className={variant === "filled" ? "fill-hyper/20" : "fill-none"}
           stroke="currentColor"
           strokeWidth="2"
         />
         
-        {/* Secondary Camera */}
+        {/* Macro Camera */}
         <circle
-          cx="185"
-          cy="85"
-          r="12"
+          cx="165"
+          cy="75"
+          r="8"
+          className={variant === "filled" ? "fill-hyper/20" : "fill-none"}
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        
+        {/* Depth Sensor */}
+        <circle
+          cx="200"
+          cy="75"
+          r="8"
           className={variant === "filled" ? "fill-hyper/20" : "fill-none"}
           stroke="currentColor"
           strokeWidth="2"
@@ -80,15 +100,27 @@ const CameraBump: React.FC<CameraBumpProps> = ({
         
         {/* Flash */}
         <rect
-          x="165"
-          y="50"
+          x="200"
+          y="40"
           width="6"
-          height="6"
-          rx="2"
+          height="16"
+          rx="3"
           className={variant === "filled" ? "fill-hyper" : "fill-none"}
           stroke="currentColor"
           strokeWidth="1.5"
         />
+        
+        {/* AI Label */}
+        <text
+          x="155"
+          y="115"
+          className="text-[8px] font-light"
+          stroke="currentColor"
+          strokeWidth="0.3"
+          fill="currentColor"
+        >
+          AI 108MP
+        </text>
         
         {/* Screen */}
         <rect
@@ -101,6 +133,16 @@ const CameraBump: React.FC<CameraBumpProps> = ({
           stroke="currentColor"
           strokeWidth="1"
           strokeDasharray="2 2"
+        />
+        
+        {/* Camera Hole Punch */}
+        <circle
+          cx="130"
+          cy="35"
+          r="5"
+          stroke="currentColor"
+          strokeWidth="1"
+          className={variant === "filled" ? "fill-sweet/20" : "fill-none"}
         />
       </svg>
     </div>
