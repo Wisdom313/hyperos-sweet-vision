@@ -40,7 +40,6 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         <div className="flex items-center">
           <span className="text-xl font-semibold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sweet via-hyper to-sweet-light">HyperOS Ports</span>
-            <span className="text-xs ml-1 opacity-70">Logo</span>
           </span>
         </div>
 
