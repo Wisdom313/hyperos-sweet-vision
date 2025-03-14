@@ -46,23 +46,23 @@ const CameraBump: React.FC<CameraBumpProps> = ({
           strokeWidth="2"
         />
         
-        {/* Camera Module - Rectangular bump with rounded corners */}
+        {/* Camera Module - Rectangular bump with rounded corners (based on Redmi Note 10 Pro) */}
         <rect
           x="150"
           y="30"
           width="65"
-          height="90"
+          height="100"
           rx="14"
           className={variant === "filled" ? "fill-sweet/20" : "fill-none"}
           stroke="currentColor"
           strokeWidth="2"
         />
         
-        {/* Main Camera - Large primary camera */}
+        {/* Main Camera - 108MP Primary */}
         <circle
           cx="182.5"
           cy="55"
-          r="16"
+          r="18"
           className={variant === "filled" ? "fill-hyper/20" : "fill-none"}
           stroke="currentColor"
           strokeWidth="2"
@@ -110,16 +110,46 @@ const CameraBump: React.FC<CameraBumpProps> = ({
           strokeWidth="1.5"
         />
         
-        {/* AI Label */}
+        {/* Mi Logo */}
         <text
           x="155"
-          y="115"
-          className="text-[8px] font-light"
+          y="118"
+          className="text-[8px] font-bold"
           stroke="currentColor"
           strokeWidth="0.3"
           fill="currentColor"
         >
-          AI 108MP
+          MI
+        </text>
+        
+        {/* AI Label */}
+        <text
+          x="170"
+          y="118"
+          className="text-[7px] font-light"
+          stroke="currentColor"
+          strokeWidth="0.3"
+          fill="currentColor"
+        >
+          AI 108MP QUAD CAMERA
+        </text>
+        
+        {/* Snapdragon Logo */}
+        <path
+          d="M60 180 C60 170, 70 165, 80 170 C90 175, 100 165, 110 170 C120 175, 130 165, 140 170 C150 175, 160 165, 170 170"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+        />
+        <text
+          x="90"
+          y="190"
+          className="text-[8px] font-medium"
+          stroke="currentColor"
+          strokeWidth="0.3"
+          fill="currentColor"
+        >
+          SNAPDRAGON
         </text>
         
         {/* Screen */}

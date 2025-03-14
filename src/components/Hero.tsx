@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import CameraBump from "./CameraBump";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { DownloadIcon, ArrowDownIcon } from "lucide-react";
+import { DownloadIcon, ArrowDownIcon, GithubIcon } from "lucide-react";
 import VersionSelector from "./VersionSelector";
 
 interface HeroProps {
@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-center mb-6"
         >
-          <span className="badge badge-primary">Redmi Note 10 Pro - Sweet</span>
+          <span className="badge badge-primary">Premium Custom ROM Experience</span>
         </motion.div>
         
         <motion.div
@@ -71,12 +71,12 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 mb-12"
+          className="flex flex-col sm:flex-row gap-4 mb-8"
         >
           <Button 
             size="lg" 
             className="bg-hyper hover:bg-hyper-dark text-white shadow-lg shadow-hyper/25 px-8"
-            onClick={() => window.open("https://devuploads.com/sn5n70ibfg1j", "_blank")}
+            onClick={() => window.open("https://github.com/Warrior-dev0/HyperOS_Ports", "_blank")}
           >
             <DownloadIcon className="h-4 w-4 mr-2" />
             Download ROM
@@ -90,6 +90,19 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             <ArrowDownIcon className="h-4 w-4 mr-2" />
             Explore Models
           </Button>
+        </motion.div>
+        
+        {/* Developer Information */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.45 }}
+          className="text-center mb-8 glass px-4 py-2 rounded-full"
+        >
+          <a href="https://github.com/Warrior-dev0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-sweet-light/80 hover:text-sweet transition-colors">
+            <GithubIcon className="h-4 w-4" />
+            Developed by WarriOr
+          </a>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

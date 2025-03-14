@@ -38,8 +38,9 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     >
       <div className="container-custom flex items-center justify-between px-6">
         <div className="flex items-center">
-          <span className="text-xl font-semibold text-sweet">
-            HyperOS<span className="text-hyper">Sweet</span>
+          <span className="text-xl font-semibold">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sweet via-hyper to-sweet-light">HyperOS Ports</span>
+            <span className="text-xs ml-1 opacity-70">Logo</span>
           </span>
         </div>
 
@@ -54,7 +55,10 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           <a href="#download" className="text-sweet-light/80 hover:text-sweet transition-colors">
             Download
           </a>
-          <Button className="ml-2 bg-hyper hover:bg-hyper-dark text-white">
+          <Button 
+            className="ml-2 bg-hyper hover:bg-hyper-dark text-white"
+            onClick={() => window.open("https://github.com/Warrior-dev0/HyperOS_Ports", "_blank")}
+          >
             <DownloadIcon className="h-4 w-4 mr-2" />
             Get ROM
           </Button>
@@ -105,7 +109,10 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           </a>
           <Button 
             className="w-full bg-hyper hover:bg-hyper-dark text-white mt-2"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              window.open("https://github.com/Warrior-dev0/HyperOS_Ports", "_blank");
+              setIsMenuOpen(false);
+            }}
           >
             <DownloadIcon className="h-4 w-4 mr-2" />
             Get ROM

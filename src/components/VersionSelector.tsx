@@ -36,9 +36,9 @@ const VersionSelector: React.FC<VersionSelectorProps> = ({
     },
     {
       id: "android14",
-      name: "HyperOS 1.5",
+      name: "HyperOS 2.0",
       androidVersion: "Android 14",
-      hypersVersion: "OS1.5.x",
+      hypersVersion: "OS2.0.x",
       icon: <Layers className="h-5 w-5" />
     },
     {
